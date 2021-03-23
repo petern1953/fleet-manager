@@ -12,7 +12,10 @@
   <tbody>
     <tr *ngFor="let row of list">
       <td *ngFor="let col of cols">
-        <app-data-cell [cellData]="row[col.key]"></app-data-cell>
+        <app-data-cell
+        [cellData]="row[col.key]"
+        [colType]="col.type">
+      </app-data-cell>
       </td>
       <td>
         <div class="btn-group">

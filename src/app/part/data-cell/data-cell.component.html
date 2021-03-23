@@ -1,3 +1,7 @@
-        <input type="text"
-        [(ngModel)]="cellData"
-        class="form-control">
+        <span *ngIf="colType == 'plain'">
+          {{ cellData }}
+        </span>
+        <input *ngIf="colType != 'plain'"
+          [type]="colType"
+          [(ngModel)]="cellData"
+          class="form-control">
