@@ -10,22 +10,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td> {{ driver.id }} </td>
-      <td>
-        <app-data-cell [cellData]="driver.name"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellData]="driver.email"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellData]="driver.phone"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellData]="driver.city"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellData]="driver.address"></app-data-cell>
+    <tr *ngFor="let row of list">
+      <td *ngFor="let col of cols">
+        <app-data-cell [cellData]="row[col.key]"></app-data-cell>
       </td>
       <td>
         <div class="btn-group">
