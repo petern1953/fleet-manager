@@ -14,7 +14,8 @@
       <td *ngFor="let col of cols">
         <app-data-cell
         [cellData]="row[col.key]"
-        [colType]="col.type">
+        [colType]="col.type"
+        [colOptions]="col.options">
       </app-data-cell>
       </td>
       <td>
