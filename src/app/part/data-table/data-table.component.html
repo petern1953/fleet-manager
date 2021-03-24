@@ -10,14 +10,11 @@
     </tr>
   </thead>
   <tbody>
-    <!-- <tr *ngFor="let row of list">
+    <tr *ngFor="let row of list">
       <td *ngFor="let col of cols">
         <app-data-cell
-        [cellData]="row[col.key]"
-        [colType]="col.type"
-        [colOptions]="col.options">
-      </app-data-cell>
-        <app-data-cell></app-data-cell>
+          [cellValue]="row[col.key]">
+        </app-data-cell>
       </td>
       <td>
         <div class="btn-group">
@@ -25,40 +22,9 @@
           <button (click)="onDelete('delete')" class="btn btn-danger"><i [class]="deleteIconClass"></i></button>
         </div>
       </td>
-    </tr> -->
-    <tr>
-      <td>
-        {{ list[0].id }}
-      </td>
-      <td>
-        <app-data-cell [cellValue]="list[0].name"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellValue]="list[0].email"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellValue]="list[0].phone"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellValue]="list[0].city"></app-data-cell>
-      </td>
-      <td>
-        <app-data-cell [cellValue]="list[0].address"></app-data-cell>
-      </td>
-      <td>
-        <div class="btn-group">
-          <button
-            (click)="onUpdate('update')"
-            class="btn btn-info">
-            <i class="fa fa-refresh"></i>
-        </button>
-          <button
-            (click)="onDelete('delete')"
-            class="btn btn-danger">
-            <i [class]="deleteIconClass"></i>
-        </button>
-        </div>
-      </td>
     </tr>
   </tbody>
 </table>
+        <!-- [colType]="col.type"
+        [colOptions]="col.options"> -->
+
