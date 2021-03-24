@@ -54,9 +54,11 @@ export class BaseService {
 
   constructor() { }
 
-  getAll(datatype: string): any[] {
-    if (datatype === 'drivers')
-      return this.data.drivers;
-    return [];
+  getAll(dataType: string): any[] {
+    if (dataType === 'drivers') {
+      return this.data['drivers'];
+    } else {
+      return this.data['vehicles'];
+    }
   }
 }

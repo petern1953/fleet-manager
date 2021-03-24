@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Driver } from './class/driver';
 import { BaseService } from './service/base.service';
 import { ConfigService } from './service/config.service';
 
@@ -9,7 +10,7 @@ import { ConfigService } from './service/config.service';
 })
 export class AppComponent implements OnInit {
   title = 'Fleet Manager';
-  driver: any = {};
+  drivers: Driver[] | any = new Driver();
   cols: any[] = [];
 
   constructor(
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.driver = this.baseService.getAll('drivers');
+    this.drivers = this.baseService.getAll('drivers');
     this.cols = this.config.cols.drivers;
   }
 }
